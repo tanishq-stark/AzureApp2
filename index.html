@@ -7,6 +7,16 @@
     <title>Document</title>
 </head>
 <body>
+    <script>
+        import { ApplicationInsights } from '@microsoft/applicationinsights-web'
+
+const appInsights = new ApplicationInsights({ config: {
+  instrumentationKey: 'e369f356-ee76-45cd-ae66-3881ecaa27c6'
+  /* ...Other Configuration Options... */
+} });
+appInsights.loadAppInsights();
+appInsights.trackPageView(); // Manually call trackPageView to establish the current user/session/pageview
+    </script>
    <h1>Hello Tanishq </h1> 
 </body>
 </html>
